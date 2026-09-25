@@ -1,3 +1,7 @@
+/* ------------------------------
+   GENERAL
+------------------------------ */
+
 * {
     margin: 0;
     padding: 0;
@@ -6,72 +10,107 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
+    font-family: Arial, Helvetica, sans-serif;
     background: #f8f5ef;
     color: #222;
 }
+
+
+/* ------------------------------
+   NAVBAR
+------------------------------ */
 
 nav {
     display: flex;
     justify-content: space-between;
     align-items: center;
+
     padding: 25px 10%;
+
+    background: #f8f5ef;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #ddd;
 }
 
-nav h2 {
+.logo {
     font-size: 28px;
 }
 
-nav a {
-    text-decoration: none;
-    color: #222;
-    margin-left: 30px;
-    font-weight: bold;
+.nav-links {
+    display: flex;
+    gap: 25px;
 }
 
-nav a:hover {
+.nav-links a {
+    text-decoration: none;
+    color: #222;
+    font-size: 15px;
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.nav-links a:hover {
     color: #777;
 }
 
+
+/* ------------------------------
+   HOME
+------------------------------ */
+
 .hero {
-    min-height: 85vh;
+    min-height: 90vh;
+
     padding: 100px 10%;
+
     display: flex;
     flex-direction: column;
     justify-content: center;
 }
 
-.hello,
 .section-label {
     letter-spacing: 4px;
-    font-size: 14px;
+    font-size: 13px;
     margin-bottom: 15px;
 }
 
 .hero h1 {
     font-size: 75px;
     line-height: 0.95;
+
     margin-bottom: 25px;
 }
 
 .hero h2 {
     font-size: 22px;
     font-weight: normal;
+
     margin-bottom: 15px;
 }
 
 .intro {
     max-width: 550px;
+
     line-height: 1.7;
+
     margin-bottom: 30px;
 }
 
 .button {
     width: fit-content;
+
     padding: 12px 25px;
+
     border: 1px solid #222;
+
     text-decoration: none;
     color: #222;
+
     transition: 0.3s;
 }
 
@@ -80,23 +119,239 @@ nav a:hover {
     color: white;
 }
 
+
+/* ------------------------------
+   ABOUT
+------------------------------ */
+
 #about {
     background: #222;
     color: white;
+
     padding: 100px 10%;
 }
 
 #about h2 {
     font-size: 45px;
+
     margin-bottom: 25px;
 }
 
-#about p:last-child {
-    max-width: 700px;
+.about-text {
+    max-width: 750px;
+
     line-height: 1.8;
+    font-size: 17px;
 }
 
+
+/* ------------------------------
+   EDUCATION
+------------------------------ */
+
+#education {
+    padding: 100px 10%;
+}
+
+#education h2 {
+    font-size: 45px;
+
+    margin-bottom: 35px;
+}
+
+.education-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.education-card {
+    border: 1px solid #222;
+
+    padding: 30px;
+
+    width: 350px;
+
+    transition: 0.3s;
+}
+
+.education-card:hover {
+    transform: translateY(-5px);
+
+    background: #222;
+    color: white;
+}
+
+.education-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.education-card p {
+    margin-top: 8px;
+}
+
+.highlight {
+    font-weight: bold;
+}
+
+
+/* ------------------------------
+   SKILLS
+------------------------------ */
+
+#skills {
+    background: #e9e4da;
+
+    padding: 100px 10%;
+}
+
+#skills h2 {
+    font-size: 45px;
+
+    margin-bottom: 35px;
+}
+
+.skill-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 15px;
+}
+
+.skill-container span {
+    border: 1px solid #222;
+
+    padding: 12px 20px;
+
+    font-weight: bold;
+
+    transition: 0.3s;
+}
+
+.skill-container span:hover {
+    background: #222;
+    color: white;
+
+    transform: translateY(-3px);
+}
+
+
+/* ------------------------------
+   CERTIFICATIONS
+------------------------------ */
+
+#certifications {
+    padding: 100px 10%;
+}
+
+#certifications h2 {
+    font-size: 45px;
+
+    margin-bottom: 35px;
+}
+
+.cert-container {
+    display: flex;
+    flex-wrap: wrap;
+
+    gap: 20px;
+}
+
+.cert-card {
+    position: relative;
+
+    border: 1px solid #222;
+
+    padding: 30px;
+
+    width: 380px;
+    min-height: 200px;
+
+    transition: 0.3s;
+}
+
+.cert-card:hover {
+    transform: translateY(-5px);
+
+    background: #222;
+    color: white;
+}
+
+.cert-number {
+    font-size: 13px;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 30px;
+}
+
+.cert-card h3 {
+    font-size: 22px;
+
+    margin-bottom: 15px;
+}
+
+.cert-card p {
+    line-height: 1.6;
+
+    margin-top: 7px;
+}
+
+.cert-date {
+    font-size: 14px;
+
+    margin-top: 15px;
+}
+
+
+/* ------------------------------
+   FOOTER
+------------------------------ */
+
 footer {
+    background: #222;
+    color: white;
+
     text-align: center;
+
     padding: 25px;
+}
+
+
+/* ------------------------------
+   RESPONSIVE DESIGN
+------------------------------ */
+
+@media (max-width: 800px) {
+
+    nav {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .nav-links {
+        flex-wrap: wrap;
+        justify-content: center;
+
+        gap: 15px;
+    }
+
+    .hero h1 {
+        font-size: 50px;
+    }
+
+    #about h2,
+    #education h2,
+    #skills h2,
+    #certifications h2 {
+        font-size: 36px;
+    }
+
+    .education-card,
+    .cert-card {
+        width: 100%;
+    }
 }
