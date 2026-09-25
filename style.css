@@ -1,0 +1,102 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f8f5ef;
+    color: #222;
+}
+
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 25px 10%;
+}
+
+nav h2 {
+    font-size: 28px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #222;
+    margin-left: 30px;
+    font-weight: bold;
+}
+
+nav a:hover {
+    color: #777;
+}
+
+.hero {
+    min-height: 85vh;
+    padding: 100px 10%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.hello,
+.section-label {
+    letter-spacing: 4px;
+    font-size: 14px;
+    margin-bottom: 15px;
+}
+
+.hero h1 {
+    font-size: 75px;
+    line-height: 0.95;
+    margin-bottom: 25px;
+}
+
+.hero h2 {
+    font-size: 22px;
+    font-weight: normal;
+    margin-bottom: 15px;
+}
+
+.intro {
+    max-width: 550px;
+    line-height: 1.7;
+    margin-bottom: 30px;
+}
+
+.button {
+    width: fit-content;
+    padding: 12px 25px;
+    border: 1px solid #222;
+    text-decoration: none;
+    color: #222;
+    transition: 0.3s;
+}
+
+.button:hover {
+    background: #222;
+    color: white;
+}
+
+#about {
+    background: #222;
+    color: white;
+    padding: 100px 10%;
+}
+
+#about h2 {
+    font-size: 45px;
+    margin-bottom: 25px;
+}
+
+#about p:last-child {
+    max-width: 700px;
+    line-height: 1.8;
+}
+
+footer {
+    text-align: center;
+    padding: 25px;
+}
